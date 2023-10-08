@@ -219,7 +219,7 @@ def display_data_in_new_window():
     style.configure("Treeview", borderwidth=2)
     style.configure("Treeview.Heading", font=('Helvetica', 10, 'bold'))
 
-    # Insert your data into the Treeview
+    # INserir dados na nova janela
     for item in ver_dados():
         tree_display_new.insert('', 'end', values=item)
 
@@ -248,12 +248,13 @@ def display_data_in_new_window():
             else:
                 tree_display_new.selection_remove(item)
 
+    # Caixa de pesquisa
     entry_search = Entry(new_window, width=20, font=('Ivy 8 bold'))
-    entry_search.place(x=10, y=570)  # Posiciona a caixa de pesquisa
+    entry_search.place(x=10, y=570)  
 
     # Botão de procura
     b_search = Button(new_window, command=search_data, text="Procurar", width=14, font=('Ivy 8 bold'), bg=co0, fg=co2, relief=RAISED, overrelief=RIDGE)
-    b_search.place(x=150, y=570)  # Posiciona o botão de procura
+    b_search.place(x=150, y=570) 
 
     # Botão para deletar dados
     b_deletar = Button(new_window, command=delete_selected_data, text="Deletar", width=14, font=('Ivy 8 bold'), bg=co6, fg=co2, relief=RAISED, overrelief=RIDGE)
